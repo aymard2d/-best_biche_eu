@@ -12,9 +12,11 @@
 
   <body>
 
-    <%= render "layouts/partials/navbar"%>
-    <h1>Les plus belles biches de ta région</h1>
-    <%= yield %>
-    <%= render "layouts/partials/footer" %>
-  </body>
+    <div class="container">
+      <%= render "layouts/partials/navbar"%>
+      <%= render "layouts/partials/banner" %>
+      <%= yield %>
+    </div>
+      <%= render "layouts/partials/footer" %>
+    </body>
 </html>
