@@ -1,36 +1,19 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://us.123rf.com/450wm/altitudevisual/altitudevisual2302/altitudevisual230220712/198629764-portrait-de-chien-en-serveur-avec-un-plateau-vide-ai-g%C3%A9n%C3%A9rative.jpg" %>
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">Best Biche</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Toutes nos stars", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Proposez-nous votre compagnon", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://media.istockphoto.com/id/1292247139/fr/photo/visage-de-doe.jpg?s=612x612&w=0&k=20&c=O82RaZvGwM88FO6AIndzaqgfaLOaCTJI2oZDKvWVEZ4=", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
-            </div>
-          </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home |</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Best animaux</a>
+        </li>
       </ul>
     </div>
+          <a class="nav-link right-link" href="#">Proposer mon animal !</a>
   </div>
-</div>
+</nav>

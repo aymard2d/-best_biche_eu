@@ -16,7 +16,7 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "tzinfo-data", platforms: %i[windows jruby]
 
 group :development, :test do
   gem "dotenv-rails"
@@ -43,3 +43,5 @@ group :test do
   gem "selenium-webdriver"
 end
 gem "devise"
+
+gem "faker"
