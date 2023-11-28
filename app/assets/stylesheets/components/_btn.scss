@@ -1,0 +1,21 @@
+.btn-primary {
+
+--bs-btn-color: #fff;
+--bs-btn-bg: #670BFF;
+--bs-btn-border-color: #670BFF;
+--bs-btn-hover-color: #fff;
+--bs-btn-hover-bg: #5809d9;
+--bs-btn-hover-border-color: #5209cc;
+--bs-btn-focus-shadow-rgb: 126, 48, 255;
+--bs-btn-active-color: #fff;
+--bs-btn-active-bg: #5209cc;
+--bs-btn-active-border-color: #4d08bf;
+--bs-btn-active-shadow: inset 0 3px 5px rgba(27, 23, 23, 0.125);
+--bs-btn-disabled-color: #fff;
+--bs-btn-disabled-bg: #670BFF;
+--bs-btn-disabled-border-color: #670BFF
+}
+
+.btn {
+  border-radius: 4px;
+}
