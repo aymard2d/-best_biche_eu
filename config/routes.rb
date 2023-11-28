@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   resources :bookings, only: %i[create]
 
   namespace :owner do
+    get 'bookings/accept'
+    get 'bookings/decline'
+    get 'dashboards/show'
     resources :animals, only: %i[new create]
     resources :bookings, only: [] do
       member do
