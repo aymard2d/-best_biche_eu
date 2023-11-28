@@ -1,11 +1,13 @@
-<div class="banner " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/photos-premium/chat-armee-mitrailleuses-dans-chaque-fond-ecran-hd_594776-1313.jpg)">
+<div class="banner " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'banner-syja.png' %>)">
   <div class="container text-center baseline">
     <h1 class="main-title p-3"><strong>Best biche</strong>
       <br>Parce qu'un animal, c'est bien plus qu'un compagnon!</h1>
-    <p>
     <p class="main-subtitle text-white mw-75 mb-3">
       Trouvez une solution originale à tous vos besoins grâce à nos animaux d'élite !
       </p>
-    <a class="btn btn-primary" href="#">Choisir votre animal</a>
+
+    <%= link_to animals_path, style: "text-decoration: none;" do %>
+    <button class="button-64" role="button"><span class="text">Voir nos stars</span></button>
+    <% end %>
   </div>
 </div>
