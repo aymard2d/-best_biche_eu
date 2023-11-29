@@ -5,6 +5,7 @@ ruby "3.1.2"
 gem "autoprefixer-rails"
 gem "bootsnap", require: false
 gem "bootstrap", "~> 5.2"
+gem "cloudinary"
 gem "font-awesome-sass", "~> 6.1"
 gem "importmap-rails"
 gem "jbuilder"
