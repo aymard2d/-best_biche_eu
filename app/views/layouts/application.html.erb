@@ -14,8 +14,13 @@
   <body>
     <div>
       <%= render "layouts/partials/navbar"%>
+      <div class="main">
       <%= yield %>
+      </div>
       <%= render "layouts/partials/footer" %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     </div>
     </body>
 </html>
+<%= render "shared/flashes" %>
