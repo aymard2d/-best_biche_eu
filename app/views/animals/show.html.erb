@@ -30,48 +30,20 @@
     </div>
   </div>
 
-  <div class="subtitle">
+  <div class="content">
     <h3 class="card-title"><strong> <%= @animal.escort_name %></strong></h3>
-    <h4 class="blue-text pb-2"><strong><%= @animal.name %></strong></h4>
+
+    <h2 class="px-2 fa-lg li-ic" id="gender"><i class="fa-solid fa-venus-mars"></i>  <%= @animal.gender %></h2>
+    <h2 class="px-2 fa-lg tw-ic" id="age"><i class="fa-solid fa-cake-candles"></i>  <%= @animal.age %></h2>
+    <h2 class="px-2 fa-lg fb-ic" id="skill"><i class="fa-solid fa-user-ninja"></i>  <%= @animal.skill %></h2>
+    <h2 class="px-2 fa-lg fb-ic" id="specie"><i class="fa-solid fa-paw"></i> <%= @animal.specie %></h2>
+    <h2 class="px-2 fa-lg fb-ic" id="name"><i class="fa-solid fa-address-card"></i> <%= @animal.name %></h2>
+
+    <p id="description"> <%= @animal.description %></p>
+
+
   </div>
 
   <div class="form-reservation">
     <%= render "animals/reservation_form", animal: @animal %>
   </div>
-
-
- <!-- > <div class="card card-cascade wider">
-    <div class="view view-cascade overlay">
-      <img class="card-img-top" src="<%= image_path 'chat_sniper.jpg'%>" alt="Card image cap">
-    </div>
-
-
-
-    Card content
-    <div class=" text-center pb-0">
-
-
-      <h3 class="card-title"><strong> <%= @animal.escort_name %></strong></h3>
-
-      <h4 class="blue-text pb-2"><strong><%= @animal.name %></strong></h4>
-
-      <p class="card-text "><%= @animal.description %> </p>
-
-      <div class="attributes d-flex ">
-        <h2 class="px-2 fa-lg li-ic"><i class="fa-solid fa-venus-mars"></i>  <%= @animal.gender %></h2>
-
-        <h2 class="px-2 fa-lg tw-ic"><i class="fa-solid fa-cake-candles"></i>  <%= @animal.age %></h2>
-
-        <h2 class="px-2 fa-lg fb-ic"><i class="fa-solid fa-user-ninja"></i>  <%= @animal.skill %></h2>
-      </div>
-    </div>
-  </div>
-
-  <div class="second-container">
-    <div class="map">
-      <img class="card-img-top" src="<%= image_path 'map.jpg'%>" alt="Card image cap">
-    </div>
-
-
-  </div>
-</div> -->
