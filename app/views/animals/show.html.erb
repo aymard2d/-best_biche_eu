@@ -7,31 +7,34 @@
   </div>
 
 
-
   <!-- Card content -->
-  <div class="card-body card-body-cascade text-center pb-0">
+  <!-- <div class="card-body card-body-cascade text-center pb-0"> -->
 
     <!-- Title -->
-    <h3 class="card-title"><strong> <%= @animal.escort_name %></strong></h3>
+    <div class="title">
+
+    <h3 class="card-title"> <strong> <%= @animal.escort_name %></strong></h3>
     <!-- Subtitle -->
     <h4 class="blue-text pb-2"><strong><%= @animal.name %></strong></h4>
     <!-- Text -->
-    <p class="card-text "><%= @animal.description %> </p>
-    <div class="attributes d-flex ">
+    <p class="card-text "> <%= @animal.description %> </p>
+    </div>
+    <div class="attributes d-flex">
       <h2 class="px-2 fa-lg li-ic"><i class="fa-solid fa-venus-mars"></i>  <%= @animal.gender %></h2>
 
       <h2 class="px-2 fa-lg tw-ic"><i class="fa-solid fa-cake-candles"></i>  <%= @animal.age %></h2>
 
-      <h2 class="px-2 fa-lg fb-ic"><i class="fa-solid fa-user-ninja"></i>  <%= @animal.skill %></h2>
     </div>
+
+      <h2 class="px-2 fa-lg fb-ic" id="skill"><i class="fa-solid fa-user-ninja"></i>  <%= @animal.skill %></h2>
+
 
     <!-- Card footer -->
 
-  </div>
+
 
   </div>
-  <div class="card-footer text-muted text-center mt-4">
+    <div class="card-footer text-muted text-center mt-4">
       <%= render "animals/reservation_form", animal: @animal %>
     </div>
 </div>
-
