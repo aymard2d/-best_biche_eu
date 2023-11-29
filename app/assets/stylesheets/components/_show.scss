@@ -1,28 +1,66 @@
 
-.container {
+.main-container {
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-gap: 16px;
 }
 
-
-
-button {
+.top-show {
+  grid-column: 1 / 3 ;
+  grid-row: 1 / 2;
+}
+.top-show-carousel {
+  grid-column: 1 / 3 ;
+  grid-row: 2 / 3;
   border-radius: 5px;
-  padding: 10px;
-  box-shadow: 2px 2px 3px black;;
+
+  img {
+    border-radius: 5px;
+  }
 }
+
+.subtitle {
+  grid-column: 1 / 2 ;
+  grid-row: 3 / 4;
+}
+
+.form-reservation {
+  grid-column: 2/ 3 ;
+  grid-row: 3 / 4;
+  border: 1px solid rgba(0, 0, 0, 0.236);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  button {
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px black;
+    margin: 50px;
+  }
+
+  .form-inputs {
+    border: 1px solid rgba(0, 0, 0, 0.236);
+    padding: 10px;
+    border-radius: 10px
+  }
+  .form-actions {
+    text-align: center;
+  }
+}
+
 
 .attributes {
   align-items: center;
   justify-content: center
 }
 
-img {
-  border-radius: 20px !important;
-  box-shadow: 2px 4px 10px black;
-}
+
 
 .card {
   border-radius: 20px 20px 0px 0px;
+  height: auto;
 }
