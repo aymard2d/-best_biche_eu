@@ -1,17 +1,19 @@
+<div class="container">
 <h1>Toutes nos stars</h1>
-<p>Chaque besoin à sa solution !</p>
-
-<% @animals.each do |animal|%>
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text"><ul>
-<li><strong><%= animal.escort_name %></strong>
-<%= animal.age %>
-<%= animal.gender %></li>
-<%= link_to "Voir cet animal", animal %>
-</ul></p>
-    <% end %>
-  </div>
+<p>Tout besoin à sa solution !</p>
+<div class="content">
+  <% @animals.each do |animal|%>
+    <div class="cards">
+      <img class="card-img-top" src="<%= image_path 'mouton.png' %>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= animal.name %></h5>
+          <ul class="card-text">
+            <li><strong><%= animal.escort_name %></strong>
+            <%= animal.specie %></li>
+            <%= link_to "Voir cet animal", animal %>
+          </ul>
+              </div>
+        </div>
+        <% end %>
+</div>
 </div>

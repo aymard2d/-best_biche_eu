@@ -6,3 +6,6 @@
 <li><%= @animal.age %></li>
 <li><%= @animal.skill %></li>
 <li><%= @animal.escort_name %></li></ul>
+
+<button class="button-48" role="button"><span class="text">Réserver cet animal</span></button>
+<%= render 'animals/reservation_form', animal: @animal %>
