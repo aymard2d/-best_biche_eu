@@ -15,7 +15,7 @@ User.destroy_all
 5.times do
   owner = User.create!(
     first_name: Faker::Name.name,
-    password: Faker::Internet.password,
+    password: 'azerty',
     email: Faker::Internet.unique.email,
   )
 

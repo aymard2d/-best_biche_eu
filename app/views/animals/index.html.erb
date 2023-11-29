@@ -7,3 +7,10 @@
 <%= animal.gender %></li>
 <%= link_to "Voir cet animal", animal %>
 <% end %></ul>
+
+<% @animals.each do |animal| %>
+  <p>
+    <%= link_to animal.name, animal %>
+    <%= "(Réservé)" if animal.reserved? %>
+  </p>
+<% end %>

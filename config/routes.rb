@@ -12,6 +12,12 @@ Rails.application.routes.draw do
 
   resources :bookings, only: %i[create]
 
+  resources :animals do
+    member do
+      patch 'reserve'
+    end
+  end
+
   namespace :owner do
     get 'bookings/accept'
     get 'bookings/decline'
