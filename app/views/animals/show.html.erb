@@ -1,5 +1,3 @@
-
-
 <div class="container">
 
 
@@ -30,6 +28,7 @@
     <!-- Card footer -->
     <div class="card-footer text-muted text-center mt-4">
       <button class=“button-48” role=“button”><span class=“text”>Réserver cet animal</span></button>
+      <%= render "animals/reservation_form", animal: @animal %>
     </div>
 
   </div>
