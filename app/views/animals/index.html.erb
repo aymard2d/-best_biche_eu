@@ -1,9 +1,17 @@
-<h1>Animals#index</h1>
-<p>Find me in app/views/animals/index.html.erb</p>
-<ul>
+<h1>Toutes nos stars</h1>
+<p>Chaque besoin à sa solution !</p>
+
 <% @animals.each do |animal|%>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text"><ul>
 <li><strong><%= animal.escort_name %></strong>
 <%= animal.age %>
 <%= animal.gender %></li>
 <%= link_to "Voir cet animal", animal %>
-<% end %></ul>
+</ul></p>
+    <% end %>
+  </div>
+</div>
