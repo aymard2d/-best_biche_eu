@@ -22,6 +22,7 @@ owner7 = User.create!(first_name: "Clothilde", last_name:"Parkbuddies" , gender:
 owner8 = User.create!(first_name: "Djadja", last_name:"Parkbuddies" , gender: "Femme", address: "room2", rating:10 , email: "jade@park.fr", password: "123444")
 owner9 = User.create!(first_name: "Fred", last_name:"Parkbuddies" , gender: "Femme", address: "room2", rating:10 , email: "fred@park.fr", password: "123444")
 
+
 Syjanimal1 = Animal.create(name: "Anatole", age: 6, gender: "Male", specie: "Pingouin", escort_name: "KinderPingu", description: "Emmène les enfants au parc. Il a toujours des goûters sur lui.", skill: "Sait utiliser l'appli 'Park buddies'", owner_id: owner1.id)
 Syjanimal2 = Animal.create(name: "Sandrine", age: 12, gender: "Female", specie: "Perroquet", owner_id: owner2.id, escort_name: "ApiRoKey", description: "ApiroKey est une de nos stars les plus demandée par les développeurs juniors. Il peut retenir n'importe quel clef API, cryptée et non-cryptée. C'est un collaborateur de travail fiable et très jovial.", skill: "Peut génèrer les mots de passe des voisins ou collègues qui parlent trop fort.")
 Syjanimal3 = Animal.create(owner_id: owner3.id, name: "Lionel", age: 4, gender: "Female", specie: "Perroquet", escort_name: "ApéroQuet", description: "Pépare l'apéro. Peut le prendre avec vous si vous êtes seul(e).", skill: "Répète inlassablement 'Santé' et 'Dans les yeux.'. Vous avez l'impression d'être 15 !")

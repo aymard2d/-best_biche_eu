@@ -7,6 +7,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <script src="https://kit.fontawesome.com/71499c7692.js" crossorigin="anonymous"></script>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -17,6 +18,9 @@
       <%= yield %>
       </div>
       <%= render "layouts/partials/footer" %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     </div>
     </body>
 </html>
+<%= render "shared/flashes" %>
