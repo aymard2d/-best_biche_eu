@@ -1,16 +1,15 @@
-.card-body {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
+.card-img-top {
+  border-radius: 0px !important;
+}
+
+.cards {
+  background-color: white;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card-text {
   display: flex;
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  align-items: center;
-  justify-content: space-around;
-  font-size: 22px;
-  color: white;
-  font-weight: bolder;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  flex-direction: column;
 }
 
 .content {
