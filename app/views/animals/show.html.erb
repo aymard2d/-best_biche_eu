@@ -1,10 +1,39 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
-<ul><li><%= @animal.name %></li>
-<li><%= @animal.specie %></li>
-<li><%= @animal.gender %></li>
-<li><%= @animal.age %></li>
-<li><%= @animal.skill %></li>
-<li><%= @animal.escort_name %></li></ul>
 
-<%= render "animals/reservation_form", animal: @animal %>
+
+<div class="container">
+
+
+<div class="card card-cascade wider">
+  <div class="view view-cascade overlay">
+    <img class="card-img-top" src="<%= image_path 'chat_sniper.jpg'%>" alt="Card image cap">
+  </div>
+
+
+
+  <!-- Card content -->
+  <div class="card-body card-body-cascade text-center pb-0">
+
+    <!-- Title -->
+    <h3 class="card-title"><strong> <%= @animal.escort_name %></strong></h3>
+    <!-- Subtitle -->
+    <h4 class="blue-text pb-2"><strong><%= @animal.name %></strong></h4>
+    <!-- Text -->
+    <p class="card-text "><%= @animal.description %> </p>
+    <div class="attributes d-flex ">
+      <h2 class="px-2 fa-lg li-ic"><i class="fa-solid fa-venus-mars"></i>  <%= @animal.gender %></h2>
+
+      <h2 class="px-2 fa-lg tw-ic"><i class="fa-solid fa-cake-candles"></i>  <%= @animal.age %></h2>
+
+      <h2 class="px-2 fa-lg fb-ic"><i class="fa-solid fa-user-ninja"></i>  <%= @animal.skill %></h2>
+    </div>
+
+    <!-- Card footer -->
+    <div class="card-footer text-muted text-center mt-4">
+      <button class=“button-48” role=“button”><span class=“text”>Réserver cet animal</span></button>
+    </div>
+
+  </div>
+
+</div>
+</div>
+
