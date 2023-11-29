@@ -32,6 +32,8 @@ User.destroy_all
   specie = Faker::Creature::Animal.name
   puts "escort name"
   escort_name = Faker::JapaneseMedia::DragonBall.character
+  puts "description"
+  description = Faker::Lorem.paragraph
 
   animal = Animal.create!(
     name: name,
@@ -40,6 +42,7 @@ User.destroy_all
     skill: skill,
     specie: specie,
     escort_name: escort_name,
+    description: description,
     owner_id: owner.id,
   )
 end
