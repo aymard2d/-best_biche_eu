@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Animals#index</h1>
 <p>Find me in app/views/animals/index.html.erb</p>
 <ul>
@@ -14,3 +15,40 @@
     <%= "(Réservé)" if animal.reserved? %>
   </p>
 <% end %>
+=======
+<div class="container back-index">
+  <div class="row justify-content-center">
+    <div class="col-sm-8 my-3">
+      <%= form_with url: animals_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "rechercher une star"
+        %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+      </div>
+    </div>
+
+  <h1>Toutes nos stars</h1>
+  <p>Tout besoin a sa solution !</p>
+  <div class="content">
+    <% @animals.each do |animal| %>
+      <a href="<%= animal_path(animal) %>" class="card-link">
+        <!-- Contenu de la carte -->
+        <div class="cards mb-2">
+          <img class="card-img-top" src="<%= image_path "mouton.png" %>" alt="Card image cap">
+          <div class="card-body">
+            <h3 class="text-center p-1 m-1"><%= animal.name %></h3>
+            <div class="card-text text-center">
+              <strong><%= animal.escort_name %></strong>
+              <%= animal.specie %>
+            </div>
+          </div>
+        </div>
+      </a>
+    <% end %>
+    </div>
+</div>
+
+>>>>>>> 7bd1c5af9ce06d71aad2cf3fe846744821927d5a

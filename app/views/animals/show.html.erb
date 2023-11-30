@@ -1,11 +1,49 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
-<ul><li><strong>Name :</strong> <%= @animal.name %></li>
-<li><strong>Espèce :</strong> <%= @animal.specie %></li>
-<li><strong>Genre :</strong> <%= @animal.gender %></li>
-<li><strong>Age :</strong> <%= @animal.age %></li>
-<li><strong>Particuralité :</strong> <%= @animal.skill %></li>
-<li><strong>Nom de scène :</strong> <%= @animal.escort_name %></li></ul>
 
-<button class="button-48" role="button"><span class="text">Réserver cet animal</span></button>
-<%= render 'animals/reservation_form', animal: @animal %>
+
+<div class="main-container">
+
+  <div class="top-show-title">
+    <h1> <%= @animal.escort_name %> </h1>
+  </div>
+
+  <div class="top-show-carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="<%= image_path 'chat_sniper.jpg'%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="<%= image_path 'chat-sniper4.jpg'%>" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="<%= image_path 'chat-sniper3.jpg'%>" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="content">
+    <h3 class="card-title"><strong> <%= @animal.escort_name %></strong></h3>
+
+    <h2 class="px-2 fa-lg li-ic" id="gender"><i class="fa-solid fa-venus-mars"></i>  <%= @animal.gender %></h2>
+    <h2 class="px-2 fa-lg tw-ic" id="age"><i class="fa-solid fa-cake-candles"></i>  <%= @animal.age %></h2>
+    <h2 class="px-2 fa-lg fb-ic" id="skill"><i class="fa-solid fa-user-ninja"></i>  <%= @animal.skill %></h2>
+    <h2 class="px-2 fa-lg fb-ic" id="specie"><i class="fa-solid fa-paw"></i> <%= @animal.specie %></h2>
+    <h2 class="px-2 fa-lg fb-ic" id="name"><i class="fa-solid fa-address-card"></i> <%= @animal.name %></h2>
+
+    <p id="description"> <%= @animal.description %></p>
+
+
+  </div>
+
+  <div class="form-reservation">
+    <%= render "animals/reservation_form", animal: @animal %>
+  </div>
