@@ -13,22 +13,23 @@
     </div>
 
   <h1>Toutes nos stars</h1>
-  <p>Tout besoin à sa solution !</p>
+  <p>Tout besoin a sa solution !</p>
   <div class="content">
-    <% @animals.each do |animal|%>
-      <div class="cards mb-2">
-        <img class="card-img-top" src="<%= image_path 'mouton.png' %>" alt="Card image cap">
-        <div class="card-body">
-          <h3 class="text-center p-1 m-1"><%= animal.name %></h3>
-          <div class="card-text text-center">
-            <strong><%= animal.escort_name %></strong>
+    <% @animals.each do |animal| %>
+      <a href="<%= animal_path(animal) %>" class="card-link">
+        <!-- Contenu de la carte -->
+        <div class="cards mb-2">
+          <img class="card-img-top" src="<%= image_path "mouton.png" %>" alt="Card image cap">
+          <div class="card-body">
+            <h3 class="text-center p-1 m-1"><%= animal.name %></h3>
+            <div class="card-text text-center">
+              <strong><%= animal.escort_name %></strong>
               <%= animal.specie %>
-              <div class="text-center"><%= link_to "Découvrez-moi",   animal, class:"btn btn-dark mb-2" %>
-              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     <% end %>
-  </div>
+    </div>
 </div>
 
