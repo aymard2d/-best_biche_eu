@@ -22,6 +22,16 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
 }
+
+/* pop up marker*/
+
+.img-pop {
+  text-align: center;
+  img{
+    width: auto;
+    height: 70px;
+  }
+}
 /*Media Queries*/
 
 /*Smallest device*/

@@ -7,6 +7,7 @@ gem "bootsnap", require: false
 gem "bootstrap", "~> 5.2"
 gem "cloudinary"
 gem "font-awesome-sass", "~> 6.1"
+gem "geocoder"
 gem "importmap-rails"
 gem "jbuilder"
 gem "pg", "~> 1.1"
