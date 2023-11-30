@@ -5,15 +5,20 @@
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "rechercher une star"
+          placeholder: "Rechercher une SYJA"
         %>
         <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
       <% end %>
       </div>
     </div>
 
-  <h1>Toutes nos stars</h1>
-  <p>Tout besoin a sa solution !</p>
+  <div class="top-index">
+    <h1>Toutes nos stars</h1>
+    <p>Tout besoin a sa solution !</p>
+    <%= link_to new_owner_animal_path do %>
+        <button class="button-57" role="button">Proposer mon animal<span>Ninja</span></button>
+      <% end  %>
+  </div>
   <div class="content">
     <% @animals.each do |animal| %>
       <a href="<%= animal_path(animal) %>" class="card-link">
@@ -25,6 +30,7 @@
             <div class="card-text text-center">
               <strong><%= animal.escort_name %></strong>
               <%= animal.specie %>
+              <p><strong><%= animal.price %> €</strong> /jour</p>
             </div>
           </div>
         </div>

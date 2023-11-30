@@ -1,0 +1,19 @@
+<%= simple_form_for [:owner, @animal] do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :escort_name %>
+    <%= f.input :ranking %>
+    <%= f.input :description %>
+    <%= f.input :age %>
+    <%= f.input :gender %>
+    <%= f.input :specie %>
+    <%= f.input :skill %>
+    <%= f.input :address %>
+    <%= f.input :photo %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "bravo champion" %>
+  </div>
+<% end %>

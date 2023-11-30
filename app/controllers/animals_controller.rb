@@ -32,4 +32,5 @@ class AnimalsController < ApplicationController
   def set_animals
     @animal = Animal.find(params[:id])
   end
+
 end
