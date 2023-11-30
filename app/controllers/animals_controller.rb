@@ -2,6 +2,14 @@ class AnimalsController < ApplicationController
   before_action :set_animals, only: [:show]
   def index
     @animals = Animal.all
+    @markers = @animals.geocoded.map do |animal|
+      {
+        lat: animal.latitude,
+        lng: animal.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {animal: animal})
+      }
+    end
+
     if params[:query].present?
       sql_subquery = <<~SQL
       animals.name @@ :query
