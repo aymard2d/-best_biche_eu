@@ -3,11 +3,10 @@ class BookingsController < ApplicationController
     @animal = Animal.new
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @animal = @booking.animal
     if @booking.save
       redirect_to animals_path, notice: "Votre réservation a bien été ajoutée"
     else
-      render "animals/show", status: :unprocessable_entity, animal: @animal
+      render "animals/show", status: :unprocessable_entity
     end
   end
 
