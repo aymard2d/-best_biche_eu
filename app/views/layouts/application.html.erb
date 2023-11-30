@@ -13,11 +13,10 @@
   </head>
 
   <body>
-    <div>
+    <div class="main">
+
       <%= render "layouts/partials/navbar"%>
-      <div class="main">
       <%= yield %>
-      </div>
       <%= render "layouts/partials/footer" %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>

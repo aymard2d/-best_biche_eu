@@ -1,13 +1,16 @@
 <div class="banner " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'banner-syja.png' %>)">
-  <div class="container text-center baseline">
-    <h1 class="main-title p-3"><strong>Best biche</strong>
-      <br>Parce qu'un animal, c'est bien plus qu'un compagnon!</h1>
-    <p class="main-subtitle text-white mw-75 mb-3">
+  <div class="baseline-container">
+    <h1 class="main-title"><strong> S Y J A </strong> </h1>
+      <h2 class="second-title">Parce qu'un animal, c'est bien plus qu'un compagnon!</h2>
+    <p class="main-subtitle">
       Trouvez une solution originale à tous vos besoins grâce à nos animaux d'élite !
-      </p>
-
-    <%= link_to animals_path, style: "text-decoration: none;" do %>
-    <button class="button-64" role="button"><span class="text">Voir nos stars</span></button>
-    <% end %>
+    </p>
   </div>
+
+
+  <%= link_to animals_path, style: "text-decoration: none;", class: "button-link" do %>
+    <button class="button-64" role="button"><span>Découvrez-les !</span></button>
+  <% end %>
+
+
 </div>
