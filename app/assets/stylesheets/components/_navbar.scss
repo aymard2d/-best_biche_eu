@@ -1,18 +1,36 @@
-.collapse {
-justify-content: center;
-align-items: center;
-}
-
-.navbar {
+.navbar-container {
   position: sticky;
   height: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.navbar-brand {
-  height: 70px;
+.logo-img {
+  height: 60px;
   width: auto;
+  margin-right: 10px;
 }
 
-.deco {
+.logo-lien {
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  color: black;
+  margin-left: 10px;
+
+  h5 {
+    margin: 0px;
+  }
+}
+
+.nav-link {
+  color: black;
+  justify-self: center;
+  align-self: center;
+}
+
+.log-out {
+  justify-self: end;
+  align-self: center;
+  margin-right: 12px;
 }
