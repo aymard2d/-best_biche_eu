@@ -53,7 +53,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_30_101858) do
     t.bigint "owner_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "ranking"
     t.string "address"
     t.index ["owner_id"], name: "index_animals_on_owner_id"
   end
