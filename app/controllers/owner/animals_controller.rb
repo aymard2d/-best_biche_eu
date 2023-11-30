@@ -1,6 +1,6 @@
 class Owner::AnimalsController < ApplicationController
   def new
-    @owner = Owner.new
+    @user = User.new
     @animal = Animal.find(params[:id])
   end
 
