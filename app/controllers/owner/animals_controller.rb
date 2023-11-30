@@ -1,19 +1,24 @@
 class Owner::AnimalsController < ApplicationController
+
   def new
     @animal = Animal.new
     @user = current_user
-    @animal = @user.animals.find(params[:id])
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    if @booking.save
-      redirect_to animals_path, notice: "Votre réservation a bien été ajoutée"
+    @animal = Animal.new(animal_params)
+    @animal.owner = current_user
+    if @animal.save
+      redirect_to animal_path(@animal)
     else
       render :new, status: :unprocessable_entity
     end
   end
-  def booking_params
-    params.require(:booking).permit(:user_id, :animal_id, :starting_date, :ending_date)
+
+  private
+
+  def animal_params
+    params.require(:animal).permit(:name, :escort_name, :age, :address, :photo, :specie, :gender, :skill, :price, :ranking, :description)
   end
+
 end
