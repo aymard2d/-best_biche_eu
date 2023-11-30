@@ -10,6 +10,7 @@
 require 'faker'
 
 Animal.destroy_all
+Booking.destroy_all
 User.destroy_all
 
 owner1 = User.create!(first_name: "Deborah", last_name:"Ticket" , gender: "Femme", address: "2, rue Sociale", rating:10 , email: "deborah@test.fr", password: "123444")
