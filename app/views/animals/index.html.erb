@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<h1>Animals#index</h1>
-<p>Find me in app/views/animals/index.html.erb</p>
-<ul>
-<% @animals.each do |animal|%>
-<li><strong><%= animal.escort_name %></strong>
-<%= animal.age %>
-<%= animal.gender %></li>
-<%= link_to "Voir cet animal", animal %>
-<% end %></ul>
-
-<% @animals.each do |animal| %>
-  <p>
-    <%= link_to animal.name, animal %>
-    <%= "(Réservé)" if animal.reserved? %>
-  </p>
-<% end %>
-=======
 <div class="container back-index">
   <div class="row justify-content-center">
     <div class="col-sm-8 my-3">
@@ -61,8 +43,3 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" >
   </div>
 </div>
-<<<<<<< HEAD
-
->>>>>>> 7bd1c5af9ce06d71aad2cf3fe846744821927d5a
-=======
->>>>>>> 2239fda7c44b78c89e62965ea16f028e6e169603

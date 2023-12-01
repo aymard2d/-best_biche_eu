@@ -12,7 +12,10 @@
 @import "pages/index";
 
 body {
-  display: flex;
-  flex-direction: column;
   background-color: #607b7d2e;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr auto;
 }

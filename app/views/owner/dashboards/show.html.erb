@@ -1,2 +1,50 @@
-<h1>Owner::Dashboards#show</h1>
-<p>Find me in app/views/owner/dashboards/show.html.erb</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>SYJA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <!-- Lien vers Bootstrap (à ajouter si tu n'utilises pas déjà Bootstrap) -->
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+<body>
+  <div class="main">
+    <!-- Navbar -->
+    <%= render "layouts/partials/navbar" %>
+
+    <main class="dashboard">
+      <div class="container mt-5">
+        <h2>Liste des Animaux</h2>
+        <div class="row">
+          <% @animals.each do |animal| %>
+            <a href="<%= animal_path(animal) %>" class="card-link">
+              <div class="cards mb-2">
+                <img class="card-img-top" src="<%= image_path "mouton.png" %>" alt="Card image cap">
+                <div class="card-body">
+                  <h3 class="text-center p-1 m-1"><%= animal.name %></h3>
+                  <div class="card-text text-center">
+                    <strong><%= animal.escort_name %></strong>
+                    <%= animal.specie %>
+                    <p><strong><%= animal.price %> €</strong> /jour</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          <% end %>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <%= render "layouts/partials/footer" %>
+
+    <!-- Messages de notification -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <!-- Flashes partagés -->
+    <%= render "shared/flashes" %>
+  </div>
+</body>
+</html>
