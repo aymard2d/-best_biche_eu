@@ -18,7 +18,7 @@
       </button>
           <%@animal.photos.each do |photo|%>
         <div class="carousel-item active">
-          <%= cl_image_tag photo.key, height: 500, width: 1200, crop: :scale %>
+          <%= cl_image_tag photo.key, height: 500, width: 1200, class: "object-fit-cover" %>
         </div>
           <% end %>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">

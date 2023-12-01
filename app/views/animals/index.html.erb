@@ -15,31 +15,20 @@
       <% end %>
     </div>
 
-
-    <%= link_to new_owner_animal_path do %>
-        <button class="button-57" role="button">Ajoutez votre buddy<span>SYJAAAAAAA <i class="fa-solid fa-heart-pulse"></i></span></button>
-      <% end  %>
-
-
-
   <div class="content-index">
     <div class="card-index">
       <% @animals.each do |animal| %>
         <a href="<%= animal_path(animal) %>" class="card-link">
           <!-- Contenu de la carte -->
           <div class="cards mb-2">
-
-
-          <% animal.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 280, width: 250, heihtcrop: :lpad %>
-          <% break %>
-          <% end %>
-
-
-    <div class="card-body">
-      <h3 class="text-center p-1 m-1"><%= animal.name %></h3>
-        <div class="card-text text-center">
-            <strong><%= animal.escort_name %></strong>
+            <% animal.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 280, width: 250, class: "object-fit-cover" %>
+            <% break %>
+            <% end %>
+          <div class="card-body">
+            <h3 class="text-center p-1 m-1"><%= animal.name %></h3>
+              <div class="card-text text-center">
+                  <strong><%= animal.escort_name %></strong>
                 <%= animal.specie %>
                 <p><strong><%= animal.price %> €</strong> /jour</p>
             </div>
