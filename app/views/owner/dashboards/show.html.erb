@@ -1,2 +1,47 @@
-<h1>Owner::Dashboards#show</h1>
-<p>Find me in app/views/owner/dashboards/show.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <!-- Liens vers vos fichiers CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <!-- Barre de navigation -->
+    <nav>
+      <!-- Vos liens de navigation -->
+    </nav>
+  </header>
+
+  <main>
+    <!-- Contenu principal du dashboard -->
+    <section>
+      <h1>Bienvenue sur votre dashboard</h1>
+    </section>
+
+    <!-- Section pour afficher les animaux de l'utilisateur -->
+    <section>
+      <h2>Vos animaux</h2>
+      <div class="animal-cards">
+        <% @owner_animals.each do |animal| %>
+        <a href="<%= animal_path(animal) %>" class="card-link">
+          <!-- Contenu de la carte -->
+          <div class="cards mb-2">
+            <img class="card-img-top" src="<%= image_path "mouton.png" %>" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="text-center p-1 m-1"><%= animal.name %></h3>
+              <div class="card-text text-center">
+                <strong><%= animal.escort_name %></strong>
+                <%= animal.specie %>
+                <p><strong><%= animal.price %> €</strong> /jour</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      <% end %>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

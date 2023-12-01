@@ -33,6 +33,13 @@
   flex-grow: 1;
 }
 
+.animal-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  flex-grow: 1;
+}
+
 #map {
   height: 100vh;
   position: sticky;
