@@ -10,8 +10,20 @@
     <h5>NOS STARS</h5>
   <% end %>
 
-<!>
-  <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "log-out" do %>
+<!-- logout drop down> -->
+
+  <%= image_tag "https://media.istockphoto.com/id/1300845620/fr/vectoriel/appartement-dic%C3%B4ne-dutilisateur-isol%C3%A9-sur-le-fond-blanc-symbole-utilisateur.jpg?s=612x612&w=0&k=20&c=BVOfS7mmvy2lnfBPghkN__k8OMsg7Nlykpgjn0YOHj0=", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <%= link_to "Dashboard",owner_dashboards_path , class: "dropdown-item" %>
+          <%= link_to "Nos stars", animals_path, class: "dropdown-item" %>
+          <%= link_to "Add your buddy", new_owner_animal_path, class: "dropdown-item" %>
+          <%= link_to "Log out",destroy_user_session_path, data: { turbo_method: :delete }, class: "log-out", class: "dropdown-item", data: {turbo_method: :delete} %>
+       </div>
+
+
+</nav>
+<!--
+ <%= link_to destroy_user_session_path, data: { turbo_method: :delete }, class: "log-out" do %>
     <button class="Btnjuju">
       <div class="sign">
         <svg viewBox="0 0 512 512">
@@ -20,6 +32,4 @@
       </div>
       <div class="text">Logout</div>
     </button>
-  <% end %>
-
-</nav>
+  <% end %> -->

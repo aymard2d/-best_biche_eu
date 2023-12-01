@@ -24,7 +24,6 @@ owner8 = User.create!(first_name: "Djadja", last_name:"Parkbuddies" , gender: "F
 owner9 = User.create!(first_name: "Fred", last_name:"Parkbuddies" , gender: "Femme", address: "room2", rating:10 , email: "fred@park.fr", password: "1234567")
 
 
-
 syjanimal2 = Animal.create!(price: 100, address: "Lyon", name: "Sandrine", age: 12, gender: "Female", specie: "Poule", owner_id: owner2.id, escort_name: "Chicken children", description: "Emmène les enfants au parc et joue avec eux.", skill: "Livrée avec 'Park Buddies'")
 syjanimal3 = Animal.create!(price: 400, address: "Marseille", owner_id: owner3.id, name: "Lionel", age: 4, gender: "Female", specie: "Perroquet", escort_name: "ApéroQuet", description: "Pépare l'apéro. Peut le prendre avec vous si vous êtes seul. Barista de génie.", skill: "Super serveur")
 syjanimal4 = Animal.create!(price: 1400, address: "Nantes",owner_id: owner4.id, name: "Jacqueline", age: 6, gender: "Female", specie: "Biche", escort_name: "Sex on the biche", description: "Vous accompagne à toutes vos soirées.", skill: "Porte bien les talons.")
