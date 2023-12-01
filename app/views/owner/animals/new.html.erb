@@ -1,3 +1,23 @@
-<h1>Proposez les services de votre compagnon</h1>
+<div class="form-container">
+  <h1>Proposez les services de votre compagnon</h1>
 
-<%= render "owner/animals/form" %>
+  <%= simple_form_for [:owner, @animal] do |f| %>
+    <div class="booking-form-inputs">
+      <div class="name"><%= f.input :name, placeholder: "Name", label: false %></div>
+      <div class="escort-name"><%= f.input :escort_name, placeholder: "Escort name", label: false %></div>
+      <div class="description"><%= f.input :description, placeholder: "Décrivez les caractéristiques de votre compagnon", label: false, as: :string %></div>
+      <div class="price"><%= f.input :price, placeholder: "0.00 €/jour", label: false %></div>
+      <div class="age"><%= f.input :age, label: "Age", collection: 18..60 %></div>
+      <div class="gender"><%= f.input :gender, label:false, as: :radio_buttons, collection: [['0', 'female'], ['1', 'male']], label_method: :second, value_method: :first %></div>
+      <div class="specie"><%= f.input :specie, label: "Espèce", collection: ["Chat", "Souris", "Pingouin", "Requin", "Autruche", "Renard", "Loup", "Flamand rose", "Poule", "Biche", "Cerf"] %></div>
+      <div class="ranking"><%= f.input :ranking, label: "Note", collection: 0..10 %></div>
+      <div class="skill"><%= f.input :skill, placeholder: 'Secret Skill', label: false %></div>
+      <div class="address"><%= f.input :address, placeholder: 'Adresse', label: false %></div>
+      <div class="photo"><%= f.input :photos, as: :file, input_html: {multiple: true}, label: "Ajouter une photo" %></div>
+    </div>
+
+    <div class="form-actions submit-animal">
+      <%= f.submit "Ajouter votre compagnon", :class => "button-64" %>
+    </div>
+  <% end %>
+</div>
