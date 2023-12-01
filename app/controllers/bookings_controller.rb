@@ -1,14 +1,13 @@
 class BookingsController < ApplicationController
   def create
-    @animal = Animal.find(params[:booking][:animal_id])
-    @booking = Booking.new
+    @animal = Animal.new
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.animal = @animal
+    @animal = @booking.animal
     if @booking.save
-      redirect_to animal_path(@animal), notice: "Votre réservation a bien été publiée"
+      redirect_to animals_path, notice: "Votre réservation a bien été ajoutée "
     else
-      render "animals/show", status: :unprocessable_entity
+      render "animals/show", status: :unprocessable_entity, animal: @animal
     end
   end
 

@@ -11,10 +11,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema[7.1].define(version: 2023_11_29_102638) do
 =======
 ActiveRecord::Schema[7.1].define(version: 2023_11_30_103954) do
 >>>>>>> 7bd1c5af9ce06d71aad2cf3fe846744821927d5a
+=======
+ActiveRecord::Schema[7.1].define(version: 2023_11_30_111651) do
+>>>>>>> 2239fda7c44b78c89e62965ea16f028e6e169603
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -63,7 +67,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_30_103954) do
     t.integer "ranking"
     t.string "address"
     t.integer "price"
+<<<<<<< HEAD
 >>>>>>> 7bd1c5af9ce06d71aad2cf3fe846744821927d5a
+=======
+    t.float "latitude"
+    t.float "longitude"
+>>>>>>> 2239fda7c44b78c89e62965ea16f028e6e169603
     t.index ["owner_id"], name: "index_animals_on_owner_id"
   end
 

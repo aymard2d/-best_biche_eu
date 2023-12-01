@@ -1,8 +1,10 @@
 class Animal < ApplicationRecord
   belongs_to :owner, class_name: "User"
-<<<<<<< HEAD
-  validates :reserved, inclusion: { in: [true, false] }
-=======
+  has_many :bookings, dependent: :destroy
+  has_one_attached :photo
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   include PgSearch::Model
 
@@ -14,5 +16,4 @@ class Animal < ApplicationRecord
   using: {
     tsearch: { prefix: true }
   }
->>>>>>> 7bd1c5af9ce06d71aad2cf3fe846744821927d5a
 end

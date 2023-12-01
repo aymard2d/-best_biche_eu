@@ -2,10 +2,9 @@
   <div class="form-inputs">
    <div class="input"> <%=f.input :starting_date, html5: true %> </div>
     <div class="input"><%= f.input :ending_date, html5: true %></div>
-   <%= f.input_field :animal_id, as: :hidden, input_html: { value: params[:id] } %>
+   <%= f.input_field :animal_id, as: :hidden, value: params[:id] %>
   </div>
   <div class="form-actions">
-    <button class=“button-48” role=“button”>
-    <%= f.button :submit, "Réserver cet animal" %></button>
+    <%= f.submit "Réserver cet animal", class:"button-48"  %>
   </div>
 <% end %>
