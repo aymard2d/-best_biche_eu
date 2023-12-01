@@ -2,6 +2,9 @@
   border-radius: 0px !important;
 }
 
+.title-index {
+  margin-top: 20px;
+}
 .cards {
   background-color: white;
   border-radius: 20px 20px 0px 0px;
@@ -17,13 +20,26 @@
   flex-direction: column;
 }
 
-.content {
+.content-index {
+  display: flex;
+  flex-direction: row;
+  grid-gap: 10px;
+}
+
+.card-index {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
+  flex-grow: 1;
 }
 
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 80px;
+}
 /* pop up marker*/
+
 
 .img-pop {
   text-align: center;
@@ -44,7 +60,7 @@
     grid-template-columns: 1fr;
   }
   #map {
-    display: none;
+
   }
 }
 
@@ -54,7 +70,7 @@
     grid-template-columns: 1fr 1fr;
   }
   #map {
-    display: none;
+
   }
 }
 
