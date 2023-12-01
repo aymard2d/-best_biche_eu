@@ -13,7 +13,7 @@
       <div class="ranking"><%= f.input :ranking, label: "Note", collection: 0..10 %></div>
       <div class="skill"><%= f.input :skill, placeholder: 'Secret Skill', label: false %></div>
       <div class="address"><%= f.input :address, placeholder: 'Adresse', label: false %></div>
-      <div class="photo"><%= f.input :photo, label: "Ajouter une photo" %></div>
+      <div class="photo"><%= f.input :photos, as: :file, input_html: {multiple: true}, label: "Ajouter une photo" %></div>
     </div>
 
     <div class="form-actions submit-animal">
