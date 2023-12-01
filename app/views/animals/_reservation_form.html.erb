@@ -1,8 +1,8 @@
 <%= simple_form_for(@booking) do |f| %>
   <div class="form-inputs">
-   <div class="input"> <%=f.input :starting_date, html5: true %> </div>
-    <div class="input"><%= f.input :ending_date, html5: true %></div>
-   <%= f.input_field :animal_id, as: :hidden, value: params[:id] %>
+  <div class="input"> <%=f.input :starting_date, html5: true, :input_html => {:value => Time.now} %> </div>
+    <div class="input"><%= f.input :ending_date, html5: true, :input_html => {:value => Time.now} %></div>
+    <%= f.input_field :animal_id, as: :hidden, value: params[:id] %>
   </div>
   <div class="form-actions">
     <%= f.submit "Réserver cet animal", class:"button-form"  %>
