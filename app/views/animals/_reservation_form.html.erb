@@ -4,11 +4,10 @@
     <div class="input"><%= f.input :ending_date, html5: true %></div>
    <%= f.input_field :animal_id, as: :hidden, value: params[:id] %>
   </div>
-  <h5>
+  <h5 id="price">
     <%= @animal.price%>€ /jour
   </h5>
   <div class="form-actions">
     <%= f.submit "Réserver cet animal", class:"button-form"  %>
   </div>
 <% end %>
-

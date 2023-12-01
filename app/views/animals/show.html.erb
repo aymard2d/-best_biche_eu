@@ -2,19 +2,21 @@
 
 <div class="main-container">
 
-  <div class="top-show-title">
-    <h1> <%= @animal.escort_name %> </h1>
+  <div class="top-show">
+    <div class="top-show-title">
+    <h1 id="main-title"> <%= @animal.escort_name %> </h1>
+    <h2 class="px-2 fa-lg fb-ic" id="ranking"><i class="fa-solid fa-ranking-star"></i><%= @animal.ranking %></h2>
+    </div>
   </div>
 
   <div class="top-show-carousel">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
           <%@animal.photos.each do |photo|%>
-          <%= cl_image_tag photo.key, height: 400, width: 800, crop: :fill %>
-          <% end %>
+        <div class="carousel-item active">
+          <%= cl_image_tag photo.key, height: 400, width: 1000, crop: :fill %>
         </div>
-      </div>
+          <% end %>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -23,38 +25,43 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
-  </div>
-
-  <div class="content">
-    <h3 class="card-title"><strong> <%= @animal.escort_name %></strong></h3>
-
-    <h2 class="px-2 fa-lg li-ic" id="gender"><i class="fa-solid fa-venus-mars"></i>  <%= @animal.gender %></h2>
-    <h2 class="px-2 fa-lg tw-ic" id="age"><i class="fa-solid fa-cake-candles"></i>  <%= @animal.age %></h2>
-
-
-
-    <h2 class="px-2 fa-lg fb-ic" id="specie"><i class="fa-solid fa-paw"></i> <%= @animal.specie %></h2>
-    <h2 class="px-2 fa-lg fb-ic" id="name"><i class="fa-solid fa-address-card"></i> <%= @animal.name %></h2>
-    <h2 class="px-2 fa-lg fb-ic" id="ranking"><i class="fa-solid fa-ranking-star"></i><%= @animal.ranking %></h2>
-
-    <div class="owner-card">
-      <img class="avatar-large" alt="avatar-large" src="<%= image_path "avatar.jpg" %>">
-      <div class="owner-identity">
-      <%=@animal.owner.first_name%>
-      <%=@animal.owner.last_name%>
-      </div>
-      <div class="owner-rating">
-      <i class="fa-solid fa-medal"></i> <%=@animal.owner.rating%> / 10
       </div>
     </div>
+  </div>
 
-    <p id="description"> <%= @animal.description %></p>
-    <button class="button-57" id="skill" role="button"><span class="text"> SECRETE SKILL </span><span><h2 class="px-2 fa-lg fb-ic" ><i class="fa-solid fa-user-ninja"></i>  <%= @animal.skill %></h2></span></button>
+  <div class="second-card-show">
+    <div class="main-content-card">
+
+      <div class="content">
+
+        <h3 class="card-title"><strong> <%= @animal.escort_name %></strong></h3>
+
+        <h2 class="px-2 fa-lg li-ic" id="gender"><i class="fa-solid fa-venus-mars"></i>  <%= @animal.gender %></h2>
+        <h2 class="px-2 fa-lg tw-ic" id="age"><i class="fa-solid fa-cake-candles"></i>  <%= @animal.age %></h2>
+        <h2 class="px-2 fa-lg fb-ic" id="specie"><i class="fa-solid fa-paw"></i> <%= @animal.specie %></h2>
+        <h2 class="px-2 fa-lg fb-ic" id="name"><i class="fa-solid fa-address-card"></i> <%= @animal.name %></h2>
+
+
+        <div class="owner-card">
+          <img class="avatar-large" alt="avatar-large" src="<%= image_path "avatar.jpg" %>">
+          <div class="owner-identity">
+          <%=@animal.owner.first_name%>
+          <%=@animal.owner.last_name%>
+          </div>
+          <div class="owner-rating">
+          <i class="fa-solid fa-medal"></i> <%=@animal.owner.rating%> / 10
+          </div>
+        </div>
+
+        <p id="description"> <%= @animal.description %></p>
+        <button class="button-57" id="skill" role="button"><span > SECRETE SKILL </span><span><h2 class="px-2 fa-lg fb-ic" ><i class="fa-solid fa-user-ninja"></i>  <%= @animal.skill %></h2></span></button>
+
+      </div>
+        <div class="form-reservation">
+          <%= render "animals/reservation_form", animal: @animal %>
+        </div>
+    </div>
 
   </div>
 
-  <div class="form-reservation">
-    <%= render "animals/reservation_form", animal: @animal %>
-  </div>
 </div>
