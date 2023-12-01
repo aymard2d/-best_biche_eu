@@ -9,7 +9,7 @@
       <div class="price"><%= f.input :price, placeholder: "0.00 €/jour", label: false %></div>
       <div class="age"><%= f.input :age, label: "Age", collection: 18..60 %></div>
       <div class="gender"><%= f.input :gender, label:false, as: :radio_buttons, collection: [['0', 'female'], ['1', 'male']], label_method: :second, value_method: :first %></div>
-      <div class="specie"><%= f.input :specie, label: "Espèce", collection: ["Chat", "Souris", "Pingouin", "Requin", "Autruche", "Renard", "Loup", "Flamand rose", "Poule", "Biche", "Cerf"] %></div>
+      <div class="specie"><%= f.input :specie, label: "Espèce", collection: ["Chat", "Souris", "Coq", "Pingouin", "Requin", "Autruche", "Renard", "Loup", "Flamand rose", "Poule", "Biche", "Cerf"] %></div>
       <div class="ranking"><%= f.input :ranking, label: "Note", collection: 0..10 %></div>
       <div class="skill"><%= f.input :skill, placeholder: 'Secret Skill', label: false %></div>
       <div class="address"><%= f.input :address, placeholder: 'Adresse', label: false %></div>
