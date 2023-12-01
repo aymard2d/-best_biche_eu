@@ -4,13 +4,13 @@
     <%= f.input :name %>
     <%= f.input :escort_name %>
     <%= f.input :ranking %>
-    <%= f.input :description %>
+    <%= f.input :description, as: :string %>
     <%= f.input :age %>
     <%= f.input :gender %>
     <%= f.input :specie %>
     <%= f.input :skill %>
     <%= f.input :address %>
-    <%= f.input :photo %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   </div>
 
   <div class="form-actions">
