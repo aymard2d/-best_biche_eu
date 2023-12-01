@@ -2,5 +2,8 @@
 <div class="img-pop">
 <h5><%= animal.escort_name %></h5>
 <p><%= animal.address %></p>
-<img src="<%= image_path 'chat-sniper3.jpg'%>" alt="">
+<% animal.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, height: 280, width: 250, heihtcrop: :lpad %>
+          <% break %>
+          <% end %>
 </div>
