@@ -31,7 +31,7 @@
 
 
           <% animal.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, width: 250, heihtcrop: :lpad %>
+          <%= cl_image_tag photo.key, height: 280, width: 250, heihtcrop: :lpad %>
           <% break %>
           <% end %>
 
