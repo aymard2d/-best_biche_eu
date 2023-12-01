@@ -2,6 +2,12 @@
   margin: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  #form-title {
+    color: white;
+    text-align: center;
+    margin-top: 250px;
+  }
 }
 
 .booking-form-inputs {
@@ -90,3 +96,5 @@
 .submit-animal {
   margin-left: 30px;
 }
+
+

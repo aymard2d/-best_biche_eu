@@ -1,5 +1,8 @@
-<div class="form-container"> 
-  <h1>Proposez les services de votre compagnon</h1>
+<div class="form-container">
+
+  <div class="banner " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'form.jpeg' %>)">
+  <h1 id="form-title">Proposez les services de votre compagnon</h1>
+  </div>
 
   <%= simple_form_for [:owner, @animal] do |f| %>
     <div class="booking-form-inputs">
